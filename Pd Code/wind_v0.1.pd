@@ -1,0 +1,22 @@
+#N canvas 0 36 1047 903 10;
+#X obj -30 -30 preset_hub k12 1 %hidden% %node% 2 1 4 %preset% 0 1
+%node% 2 1 14 %preset% 0 0 %node% 2 2 7 %preset% 0 1 %node% 2 3 8 %node%
+2 5 14 %node% 2 5 28 %preset% 0 0 %node% 2 6 3 %node% 2 6 30 %node%
+2 6 25 %node% 2 7 3 %node% 2 6 4 %node% 2 6 14 %node% 2 7 7 %preset%
+0 1 %node% 2 8 4 %preset% 0 2 %node% 2 8 14 %preset% 0 1 %node% 2 9
+7 %preset% 0 0;
+#X obj 209 79 @pd_extra/K12/raspberrypi_digital 0;
+#X obj 209 184 @pd_extra/K12/math_number 0;
+#X obj 10 37 @pd_extra/K12/preset 0;
+#X obj 531 602 @pd_extra/K12/instr_sustained1 0;
+#X obj 527 733 @pd_extra/K12/output 0;
+#X obj 127 346 @pd_extra/K12/math_subtract 0;
+#X obj 105 269 @pd_extra/K12/math_number 0;
+#X obj 127 525 @pd_extra/K12/raspberrypi_digital 0;
+#X obj 127 449 @pd_extra/K12/math_number 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 1;
+#X connect 2 0 6 1;
+#X connect 6 0 9 0;
+#X connect 7 0 6 0;
+#X connect 9 0 8 0;
