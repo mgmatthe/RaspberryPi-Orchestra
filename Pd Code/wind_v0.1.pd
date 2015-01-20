@@ -1,22 +1,57 @@
 #N canvas 0 36 1047 903 10;
-#X obj -30 -30 preset_hub k12 1 %hidden% %node% 2 1 4 %preset% 0 1
-%node% 2 1 14 %preset% 0 0 %node% 2 2 7 %preset% 0 1 %node% 2 3 8 %node%
-2 5 14 %node% 2 5 28 %preset% 0 0 %node% 2 6 3 %node% 2 6 30 %node%
-2 6 25 %node% 2 7 3 %node% 2 6 4 %node% 2 6 14 %node% 2 7 7 %preset%
-0 1 %node% 2 8 4 %preset% 0 2 %node% 2 8 14 %preset% 0 1 %node% 2 9
-7 %preset% 0 0;
-#X obj 209 79 @pd_extra/K12/raspberrypi_digital 0;
-#X obj 209 184 @pd_extra/K12/math_number 0;
-#X obj 10 37 @pd_extra/K12/preset 0;
-#X obj 531 602 @pd_extra/K12/instr_sustained1 0;
-#X obj 527 733 @pd_extra/K12/output 0;
-#X obj 127 346 @pd_extra/K12/math_subtract 0;
-#X obj 105 269 @pd_extra/K12/math_number 0;
-#X obj 127 525 @pd_extra/K12/raspberrypi_digital 0;
-#X obj 127 449 @pd_extra/K12/math_number 0;
+#X obj -30 -30 preset_hub k12 1 %hidden% %node% 2 1 4 %preset% 0 0
+%preset% 1 1 %node% 2 1 14 %preset% 0 0 %preset% 1 0 %node% 2 2 7 %preset%
+0 1 %preset% 1 1 %node% 2 3 8 %node% 2 5 14 %node% 2 5 28 %preset%
+0 0 %preset% 1 0 %node% 2 6 3 %node% 2 6 30 %node% 2 6 25 %node% 2
+7 3 %node% 2 6 4 %node% 2 6 14 %node% 2 7 7 %preset% 0 1 %node% 2 8
+4 %preset% 0 2 %node% 2 8 14 %preset% 0 1 %node% 2 9 7 %preset% 0 1
+%preset% 1 1 %node% 2 6 4 %preset% 0 0 %preset% 1 2 %node% 2 6 14 %preset%
+0 0 %preset% 1 0 %node% 2 7 7 %preset% 0 1 %preset% 1 1 %node% 2 11
+7 %preset% 0 2 %preset% 1 2 %node% 2 13 7 %preset% 0 4 %preset% 1 4
+%node% 2 15 7 %preset% 0 1 %preset% 1 1 %node% 2 18 7 %preset% 0 60
+%preset% 1 60 %node% 2 21 7 %preset% 0 60 %preset% 1 60;
+#X obj 171 -4 @pd_extra/K12/raspberrypi_digital 0;
+#X obj 171 101 @pd_extra/K12/math_number 0;
+#X obj 15 -4 @pd_extra/K12/preset 0;
+#X obj 881 498 @pd_extra/K12/instr_sustained1 0;
+#X obj 881 612 @pd_extra/K12/output 0;
+#X obj 396 -7 @pd_extra/K12/raspberrypi_digital 0;
+#X obj 396 98 @pd_extra/K12/math_number 0;
+#X obj 196 488 @pd_extra/K12/math_add 0;
+#X obj 89 186 @pd_extra/K12/math_number 0;
+#X obj 196 373 @pd_extra/K12/math_multiply 0;
+#X obj 278 305 @pd_extra/K12/math_number 0;
+#X obj 435 374 @pd_extra/K12/math_multiply 0;
+#X obj 517 306 @pd_extra/K12/math_number 0;
+#X obj 167 265 @pd_extra/K12/math_subtract 0;
+#X obj 314 187 @pd_extra/K12/math_number 0;
+#X obj 392 265 @pd_extra/K12/math_subtract 0;
+#X obj 435 483 @pd_extra/K12/math_subtract 0;
+#X obj 86 582 @pd_extra/K12/math_number 0;
+#X obj 312 385 @pd_extra/K12/math_multiply 0;
+#X obj 114 665 @pd_extra/K12/math_add 0;
+#X obj 114 768 @pd_extra/K12/math_number 0;
 #X connect 1 0 2 0;
-#X connect 2 0 7 1;
-#X connect 2 0 6 1;
-#X connect 6 0 9 0;
-#X connect 7 0 6 0;
-#X connect 9 0 8 0;
+#X connect 2 0 9 1;
+#X connect 2 0 14 1;
+#X connect 2 0 11 1;
+#X connect 6 0 7 0;
+#X connect 7 0 15 1;
+#X connect 7 0 16 1;
+#X connect 7 0 13 1;
+#X connect 8 0 18 1;
+#X connect 8 0 20 1;
+#X connect 9 0 14 0;
+#X connect 10 0 8 0;
+#X connect 11 0 10 1;
+#X connect 12 0 17 0;
+#X connect 13 0 12 1;
+#X connect 14 0 10 0;
+#X connect 14 0 19 0;
+#X connect 15 0 16 0;
+#X connect 16 0 12 0;
+#X connect 16 0 19 1;
+#X connect 17 0 8 1;
+#X connect 18 0 20 0;
+#X connect 19 0 17 1;
+#X connect 20 0 21 0;
